@@ -10,7 +10,7 @@ const files = glob.sync('**/*.md', { cwd: 'articles'})
 // This function will be used later
 function getSlugs(post, _) {
   const slug = post.substr(0, post.lastIndexOf('.'))
-  return `/blog/${slug}`
+  return `/post-single/${slug}`
 }
 
 const pkg = require('./package')

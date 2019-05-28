@@ -156,6 +156,7 @@ img.post-image {
   max-width: 780px;
   width: 100%;
   margin: auto;
+  padding: 1rem;
 }
 .post-buttons-wrapper .button {
   background: #000;
