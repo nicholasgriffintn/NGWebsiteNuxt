@@ -158,7 +158,7 @@ img.post-image {
 }
 .post-content-wrap {
   max-width: 780px;
-  width: 100%;
+  width: calc(100% -  2rem);
   margin: auto;
   padding: 1rem;
 }
