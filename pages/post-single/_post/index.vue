@@ -34,7 +34,15 @@ export default {
       // rendered in HTML via the `markdownit` class
       content: md.render(res.body)
     };
-  }
+  },
+  /* head () {
+    return {
+      title: attributes.title,
+      meta: [
+        { hid: 'description', name: 'description', content: attributes.description }
+      ]
+    }
+  } */
 };
 </script>
 
