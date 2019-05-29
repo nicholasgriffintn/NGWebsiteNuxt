@@ -12,9 +12,9 @@ const pagesToCache = ["/", "/offline"];
 
 // Static files to cache on install
 const staticsToCache = [
-  "static/js/typed.min.js",
-  "static/js/nghpjs.js",
-  "static/js/lazyload.min.js"
+  "/js/typed.min.js",
+  "/js/nghpjs.js",
+  "/js/lazyload.min.js"
 ];
 
 // Function to add a path to the cache
