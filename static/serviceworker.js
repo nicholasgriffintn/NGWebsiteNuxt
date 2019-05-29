@@ -1,7 +1,7 @@
 "use strict";
 
 // The names for our caches and the version number
-const version = "-v1.0.5";
+const version = "-v1.1.0";
 const staticCache = "cachedFiles" + version;
 const pagesCache = "cachedPages";
 const imagesCache = "cachedImages";

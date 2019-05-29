@@ -3,12 +3,12 @@
     <header>
     <div class="ui container text-normal">
         <span class="site-title-header">
-          <nuxt-link :to="'https://nicholasgriffin.dev'">
+          <nuxt-link :to="'/'">
             Nicholas Griffin
             </nuxt-link>
         </span>
         <div class="site-links-header">
-          <nuxt-link :to="'https://nicholasgriffin.dev'">
+          <nuxt-link :to="'/'">
                 Home
             </nuxt-link>
         </div>
