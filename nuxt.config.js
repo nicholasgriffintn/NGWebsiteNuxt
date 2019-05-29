@@ -76,7 +76,8 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-NK46QBJ' }]
   ],
   /*
   ** Axios module configuration
