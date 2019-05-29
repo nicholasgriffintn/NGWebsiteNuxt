@@ -3,14 +3,14 @@
     <header>
     <div class="ui container text-normal">
         <span class="site-title-header">
-                <a href="https://nicholasgriffin.dev">
+          <nuxt-link :to="'https://nicholasgriffin.dev'">
             Nicholas Griffin
-        </a>
+            </nuxt-link>
         </span>
         <div class="site-links-header">
-            <a href="https://nicholasgriffin.dev">
+          <nuxt-link :to="'https://nicholasgriffin.dev'">
                 Home
-            </a>
+            </nuxt-link>
         </div>
     </div>
 </header>
@@ -64,11 +64,6 @@
     });
 </script>
 
-
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK46QBJ" height="0" width="0"
-        style="display:none;visibility:hidden"></iframe>
-</noscript>
 
   </div>
 </template>

@@ -60,14 +60,6 @@
     <script src="js/typed.min.js" type="text/javascript"></script>
     <script src="js/nghpjs.js"></script>
 
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-NK46QBJ"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
   </div>
 </template>
 
