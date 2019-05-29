@@ -1,6 +1,6 @@
 <template>
               <div class="ui three stackable cards" id="BlogContentContainer">
-<article v-for="(post,key) in bloglist" :key="key" class="ui cardui card">
+<article v-for="(post,key) in bloglist" :key="key" class="ui card">
     <div class="image">
     <img
                     :src="post.header"

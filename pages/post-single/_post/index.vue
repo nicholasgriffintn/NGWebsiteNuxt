@@ -20,29 +20,25 @@ var md = require("markdown-it")({
 
 export default {
   async asyncData({ params }) {
-    // We read the markdown file by looking at the `post` parameter
-    // in the URL and searching for a markdown file with that name in
-    // the articles directory
     const fileContent = await import(`~/articles/${params.post}.md`);
-    // We process the raw output through front-matter
-    // (markdownit was giving me garbled results)
     let res = fm(fileContent.default);
     return {
-      // attributes will be an object containing the markdown metadata
       attributes: res.attributes,
-      // content will contain the body of the markdown file,
-      // rendered in HTML via the `markdownit` class
       content: md.render(res.body)
     };
   },
-  /* head () {
+  head() {
     return {
-      title: attributes.title,
+      title: this.attributes.title + ' | Nicholas Griffin',
       meta: [
-        { hid: 'description', name: 'description', content: attributes.description }
+        {
+          hid: "description",
+          name: "description",
+          content: this.attributes.description
+        }
       ]
-    }
-  } */
+    };
+  }
 };
 </script>
 
