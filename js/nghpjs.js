@@ -1,3 +1,34 @@
+window.addEventListener("DOMContentLoaded", function(event) {// Check for Promises and fetch
+  window.Promise ||
+    document.write('<script src="js/es6-promise.min.js" ></script>');
+  window.fetch || document.write('<script src="js/fetch.min.js"></script>');
+  
+  // Load the service worker
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("/serviceworker.js", { scope: "/" })
+
+      .then(function(registration) {
+        console.log(
+          `Service Worker successfully registered for`,
+          registration.scope
+        );
+      })
+
+      .catch(function(error) {
+        console.log(`ServiceWorker not registered: ${error}`);
+      });
+
+    if (navigator.serviceWorker.controller) {
+      window.addEventListener("load", function() {
+        navigator.serviceWorker.controller.postMessage({
+          command: "trimCaches"
+        });
+      });
+    }
+  }
+});
+
 window.addEventListener("DOMContentLoaded", function(event) {
   // Create cookie function
   function createCookie(name, value, days) {

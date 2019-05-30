@@ -1,3 +1,5 @@
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
 /*!
  * Vue.js v2.6.10
  * (c) 2014-2019 Evan You
@@ -47,5 +49,3 @@
  * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
  * @license  MIT
  */
-
-/*! https://mths.be/punycode v1.4.1 by @mathias */
