@@ -1,33 +1,33 @@
 <template>
-              <div class="ui three stackable cards" id="BlogContentContainer">
-<article v-for="(post,key) in bloglist" :key="key" class="ui card">
-    <div class="image">
-    <img
-                    :src="post.header"
-                    :alt="post.title"
-                    loading="lazy"
-                  >
-    </div>
-    <div class="content">
-        <nuxt-link class="header" :to="`/blog/${post.slug}`">
-            {{ post.title }}
+  <div class="ui three stackable cards" id="BlogContentContainer">
+    <article v-for="(post,key) in bloglist" :key="key" class="ui card">
+      <div class="image">
+        <img
+          :src="post.thumbnail"
+          :alt="post.title"
+          loading="lazy"
+        />
+      </div>
+      <div class="content">
+        <nuxt-link class="header" :to="`/post-single/${post.slug}`">
+          {{ post.title }}
         </nuxt-link>
-            <div class="meta">
-                <span class="date">
-                    {{ post.ctime }}
-                </span>
-            </div>
-        <div class="description">
-            {{ post.description }}
+        <div class="meta">
+          <span class="date">
+            {{ post.ctime }}
+          </span>
         </div>
-    </div>
-    <div class="extra content">
-    <nuxt-link class="ui button primary basic inverted" :to="`/post-single/${post.slug}`">
-    Read more
-    </nuxt-link>
-    </div>
-</article>
-              </div>
+        <div class="description">
+          {{ post.description }}
+        </div>
+      </div>
+      <div class="extra content">
+        <nuxt-link class="ui button primary basic inverted" :to="`/post-single/${post.slug}`">
+         Read more
+        </nuxt-link>
+      </div>
+    </article>
+  </div>
 </template>
 
 <script>

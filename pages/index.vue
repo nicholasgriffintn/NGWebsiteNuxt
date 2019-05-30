@@ -13,81 +13,69 @@
               <div id="stars2"/>
               <div id="stars3"/>
             </div>
-            <div class="mid-box-background">
-              <div class="title-wrapper">
-                <h1 id="homepage-title" class="animated bounceInDown">I'm Nicholas Griffin</h1>
-                <div class="homepage-subtitle">
-                  <div id="typed-strings" style="display: none;">
-                    <p>
-                      I'm a
-                      <strong>web developer</strong>.
-                    </p>
-                    <p>
-                      I'm a
-                      <strong>blogger</strong>.
-                    </p>
-                    <p>
-                      I'm a
-                      <strong>technology ethusiast</strong>.
-                    </p>
-                    <p>Okay...</p>
-                    <p>I'm really just a bit of a nerd.</p>
-                    <p>
-                      <span>
-                        I live in the
-                        <strong>UK</strong>.
-                      </span>
-                    </p>
-                    <p>I spend most of my time doing new stuff on the web.</p>
-                    <p>Mostly front end, but I do dabble in a bit of back end.</p>
-                    <p>
-                      When I run out of stuff on the web, I often end up staying up late with
-                      <strong>Netflix</strong>.
-                    </p>
-                    <p>
-                      My dog is a bit of an
-                      <span id="dogImageModal">idiot</span>
-                    </p>
-                    <p>But probably not as bad as some of my code...</p>
-                    <p>We've all been through those days.</p>
-                    <p>All that said, feel free to check out some more of my stuff.</p>
-                  </div>
-                  <div id="typed-strings-delay" style="display: none;">
-                    <p></p>
-                    <p>Are you still reading this?</p>
-                    <p>Did you not see the icon?</p>
-                    <p>Seriously... Just scroll your mouse down!</p>
-                  </div>
-                  <div id="second-typed-strings-delay" style="display: none;">
-                    <p></p>
-                    <p>Fine, be like that.</p>
-                    <p>I'll just do it for you.</p>
-                  </div>
-                  <div id="third-typed-strings-delay" style="display: none;">
-                    <p>....</p>
-                    <p>Was that so hard?</p>
-                    <p>Oh wait...</p>
-                    <p>You can't see this..</p>
-                    <p>I could put anything here right now and you wouldn't have a clue...</p>
-                    <p>Watermelons</p>
-                    <p>Blueberries</p>
-                    <p>Wasn't that fun?</p>
-                    <p>I should probably revert this just in case you come back..</p>
-                    <p>Right, let's see, what can I put here?...</p>
-                    <p>I know!</p>p&gt;
-                    <p>Web Developer, Blogger and Technology Enthusiast</p>
-                  </div>
-                  <div id="default-typed-strings">
-                    <p></p>
-                    <p>Web Developer, Blogger and Technology Enthusiast</p>
-                  </div>
-                  <span id="typed">Web Developer, Blogger and Technology Enthusiast</span>
-                  <span class="typed-cursor typed-cursor--blink">|</span>
-                </div>
-              </div>
-              <div class="buttons-wrapper"></div>
-            </div>
-            <div class="scroll-down" style="opacity: 1; display: block;">
+    <div class="mid-box-background">
+      <div class="title-wrapper">
+        <h1 id="homepage-title" class="animated bounceInDown">I'm Nicholas Griffin</h1>
+        <div class="homepage-subtitle">
+          <div id="typed-strings">
+            <p>I'm a
+              <strong>web developer</strong>.</p>
+            <p>I'm a
+              <strong>blogger</strong>.</p>
+            <p>I'm a
+              <strong>technology ethusiast</strong>.</p>
+            <p>Okay...</p>
+            <p>I'm really just a bit of a nerd.</p>
+            <p>
+              <span>I live in the
+                <strong>UK</strong>.</span>
+            </p>
+            <p>I spend most of my time doing new stuff on the web.</p>
+            <p>Mostly front end, but I do dabble in a bit of back end.</p>
+            <p>When I run out of stuff on the web, I often end up staying up late with
+              <strong>Netflix</strong>.</p>
+            <p>My dogs are a complete 
+              <span id="dogImageModal">idiots</span>
+            </p>
+            <p>But probably not as bad as some of my code...</p>
+            <p>We've all been through those days.</p>
+            <p>All that said, feel free to check out some more of my stuff.</p>
+          </div>
+          <div id="typed-strings-delay">
+            <p> </p>
+            <p>Are you still reading this?</p>
+            <p>Did you not see the icon?</p>
+            <p>Seriously... Just scroll your mouse down!</p>
+          </div>
+          <div id="second-typed-strings-delay">
+            <p> </p>
+            <p>Fine, be like that.</p>
+            <p>I'll just do it for you.</p>
+          </div>
+          <div id="third-typed-strings-delay">
+            <p>....</p>
+            <p>Was that so hard?</p>
+            <p>Oh wait...</p>
+            <p>You can't see this..</p>
+            <p>I could put anything here right now and you wouldn't have a clue...</p>
+            <p>Watermelons</p>
+            <p>Blueberries</p>
+            <p>Wasn't that fun?</p>
+            <p>I should probably revert this just in case you come back..</p>
+            <p>Right, let's see, what can I put here?...</p>
+            <p>I know!</p>p&gt;
+            <p>Web Developer, Blogger and Technology Enthusiast</p>
+          </div>
+          <div id="default-typed-strings">
+            <p> </p>
+            <p>Web Developer, Blogger and Technology Enthusiast</p>
+          </div>
+          <span id="typed"></span>
+        </div>
+      </div>
+      <div class="buttons-wrapper"></div>
+    </div>
+            <div class="scroll-down">
               <div class="scroll-icon-wrapper">
                 <div class="scroller"></div>
               </div>

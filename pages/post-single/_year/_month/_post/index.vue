@@ -20,7 +20,7 @@ var md = require("markdown-it")({
 
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(`~/articles/${params.post}.md`);
+    const fileContent = await import(`~/articles/${params.year}/${params.month}/${params.post}.md`);
     let res = fm(fileContent.default);
     return {
       attributes: res.attributes,
