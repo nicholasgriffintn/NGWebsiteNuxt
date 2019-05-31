@@ -2,6 +2,10 @@ importScripts('/_nuxt/workbox.4c4f5ca6.js')
 
 workbox.precaching.precacheAndRoute([
   {
+    "url": "/_nuxt/00a762ba8dfe8d896699.js",
+    "revision": "691ea5d1befe36a386717231706b065b"
+  },
+  {
     "url": "/_nuxt/03e9a924ab826445cf4c.js",
     "revision": "fcecf337a53dc9e3364544e06eb501c6"
   },
@@ -22,8 +26,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "064970abf437acaef5dcf470943511f5"
   },
   {
-    "url": "/_nuxt/6f8d47f39e18e7a5a0a5.js",
-    "revision": "e3720d0e495ea7a64de6693689359741"
+    "url": "/_nuxt/71fa2bae41f56918297a.js",
+    "revision": "8737d704105e3db6759cdc679060682e"
   },
   {
     "url": "/_nuxt/7d66374f6722a12e89b2.js",
@@ -32,10 +36,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/7de4ddb54974d87b88f9.js",
     "revision": "9e050eab8c2383938df7b7114cd811fc"
-  },
-  {
-    "url": "/_nuxt/81450bc0fb86e6962f7e.js",
-    "revision": "d43cda63e501a97003158ca0ce09a1df"
   },
   {
     "url": "/_nuxt/927d978d8679bb714646.js",
@@ -50,19 +50,19 @@ workbox.precaching.precacheAndRoute([
     "revision": "bb9dc1a4913ccea42f5dc7fc923f0336"
   },
   {
-    "url": "/_nuxt/b31bf4acc6c34186247b.js",
-    "revision": "09ed28fd3eaba5a9d9697da84cbcd109"
+    "url": "/_nuxt/a2f3bf3de944616b828f.js",
+    "revision": "4867964d3b77eec8c8e59d4f858c4a2f"
   },
   {
-    "url": "/_nuxt/b83bc9eabd6636bf0ad8.js",
-    "revision": "99cb53773b9b7e4ccd098ba58892215f"
+    "url": "/_nuxt/b31bf4acc6c34186247b.js",
+    "revision": "09ed28fd3eaba5a9d9697da84cbcd109"
   },
   {
     "url": "/_nuxt/d8b751a0d2eb2bf7a101.js",
     "revision": "32f3ec8ba13ee440e647345f176e4872"
   }
 ], {
-  "cacheId": "nicholasgriffin",
+  "cacheId": "NicholasGriffin",
   "directoryIndex": "/",
   "cleanUrls": false
 })
