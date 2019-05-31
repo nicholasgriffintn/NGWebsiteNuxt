@@ -19,7 +19,7 @@ export const actions = {
           var res = files(key);
           res.slug = key.slice(2, -3);
           return res;
-      })
+      }})
       .map(post => {
           let attributes = fm(post.default).attributes;
           attributes.slug = post.slug;

@@ -8,9 +8,6 @@ header: https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.44.00
 ctime: 2019-05-30
 ---
 
-
-# Making my site's content static with Nuxt
-
 So a few months ago I wrote about how [i created a blog for myself with Node, Express and Mongo](https://nicholasgriffin.dev/post-single/5c7be6e2a1e5fbe51cd94950). I've been using that system for a couple of months now and it worked well in terms of allowing me to play around with Mongo and Express, however, it is not the best solution on offer.
 
 So yesterday, I decided that noow would be a good time to start creating a  new static site setup that would allow my appliication to be hosted seperately from the server. I also wanted my app to be a static site so that i could host it on S3.

@@ -1399,6 +1399,10 @@ h1#single-title {
   .post-header-titles {
     margin-top: 0 !important;
   }
+
+  .header-single-image-full {
+    min-height: 10px;
+  }
 }
 
 .post-header-titles h2 {
