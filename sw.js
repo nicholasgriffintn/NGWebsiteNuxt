@@ -58,8 +58,8 @@ workbox.precaching.precacheAndRoute([
     "revision": "89f80aceb7681e5677772862ca09fe9e"
   },
   {
-    "url": "/_nuxt/f1ae6aed591872faf670.js",
-    "revision": "ffb4d9770ee331afa9e777611fe23315"
+    "url": "/_nuxt/fc3561121ae5b1e0ca5c.js",
+    "revision": "30b42bc1ab8b1f2b2566aff19e8781d0"
   }
 ], {
   "cacheId": "NicholasGriffin",
