@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", function(event) {// Check for Promises and fetch
+
   window.Promise ||
     document.write('<script src="js/es6-promise.min.js" ></script>');
   window.fetch || document.write('<script src="js/fetch.min.js"></script>');
@@ -27,9 +27,6 @@ window.addEventListener("DOMContentLoaded", function(event) {// Check for Promis
       });
     }
   }
-});
-
-window.addEventListener("DOMContentLoaded", function(event) {
   // Create cookie function
   function createCookie(name, value, days) {
     var expires;
@@ -61,28 +58,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
 
   var hasCookie = readCookie("visited");
 
-  // Create cookie notification
-  const doNotTrackEnabled = () => {
-    return (
-      window.doNotTrack == "1" ||
-      navigator.doNotTrack == "yes" ||
-      navigator.doNotTrack == "1" ||
-      navigator.msDoNotTrack == "1" ||
-      (typeof window.external === "object" &&
-        typeof window.external.msTrackingProtectionEnabled === "function" &&
-        typeof window.external.msTrackingProtectionEnabled())
-    );
-  };
-
-  const cookieMessage = document.querySelector(".js-cookie-message");
-
-  if (!doNotTrackEnabled()) {
-    //console.log("you has dnt");
-    if (!hasCookie) {
-      //console.log("you do not has cookie or dnt");
-      cookieMessage.removeAttribute("hidden");
-    }
-  }
+  var cookieMessage = document.querySelector(".js-cookie-message");
 
   cookieMessage.addEventListener("click", el => {
     if (el.target.nodeName === "BUTTON") {
@@ -118,7 +94,7 @@ window.addEventListener("DOMContentLoaded", function(event) {
   }
 
   function scrollIt(destination, duration = 200, easing = "linear", callback) {
-    const easings = {
+    var easings = {
       linear(t) {
         return t;
       },
@@ -162,24 +138,24 @@ window.addEventListener("DOMContentLoaded", function(event) {
       }
     };
 
-    const start = window.pageYOffset;
-    const startTime =
+    var start = window.pageYOffset;
+    var startTime =
       "now" in window.performance ? performance.now() : new Date().getTime();
 
-    const documentHeight = Math.max(
+    var documentHeight = Math.max(
       document.body.scrollHeight,
       document.body.offsetHeight,
       document.documentElement.clientHeight,
       document.documentElement.scrollHeight,
       document.documentElement.offsetHeight
     );
-    const windowHeight =
+    var windowHeight =
       window.innerHeight ||
       document.documentElement.clientHeight ||
       document.getElementsByTagName("body")[0].clientHeight;
-    const destinationOffset =
+    var destinationOffset =
       typeof destination === "number" ? destination : destination.offsetTop;
-    const destinationOffsetToScroll = Math.round(
+    var destinationOffsetToScroll = Math.round(
       documentHeight - destinationOffset < windowHeight
         ? documentHeight - windowHeight
         : destinationOffset
@@ -194,10 +170,10 @@ window.addEventListener("DOMContentLoaded", function(event) {
     }
 
     function scroll() {
-      const now =
+      var now =
         "now" in window.performance ? performance.now() : new Date().getTime();
-      const time = Math.min(1, (now - startTime) / duration);
-      const timeFunction = easings[easing](time);
+      var time = Math.min(1, (now - startTime) / duration);
+      var timeFunction = easings[easing](time);
       window.scroll(
         0,
         Math.ceil(timeFunction * (destinationOffsetToScroll - start) + start)
@@ -216,10 +192,10 @@ window.addEventListener("DOMContentLoaded", function(event) {
     scroll();
   }
 
-  let scrollpos = window.scrollY;
-  const header_height = 20;
-  const add_class_on_scroll = () => document.body.classList.add("scrolled");
-  const remove_class_on_scroll = () =>
+  var scrollpos = window.scrollY;
+  var header_height = 20;
+  var add_class_on_scroll = () => document.body.classList.add("scrolled");
+  var remove_class_on_scroll = () =>
     document.body.classList.remove("scrolled");
   window.addEventListener("scroll", function() {
     scrollpos = window.scrollY;
@@ -605,4 +581,3 @@ window.addEventListener("DOMContentLoaded", function(event) {
   };
 
   initJSRequests();
-});
