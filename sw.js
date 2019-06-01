@@ -10,10 +10,6 @@ workbox.precaching.precacheAndRoute([
     "revision": "65c07ca1205590f81a441eecb60373b7"
   },
   {
-    "url": "/_nuxt/211117b094e2aac70f0a.js",
-    "revision": "d0e99a80164cc9a1465c0abf9090c8a0"
-  },
-  {
     "url": "/_nuxt/2e7a363c321a9edb1c08.js",
     "revision": "cc1754915c12c622323bc027ebb692b0"
   },
@@ -60,6 +56,10 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "/_nuxt/e34bffa4b736a59c5395.js",
     "revision": "89f80aceb7681e5677772862ca09fe9e"
+  },
+  {
+    "url": "/_nuxt/f1ae6aed591872faf670.js",
+    "revision": "ffb4d9770ee331afa9e777611fe23315"
   }
 ], {
   "cacheId": "NicholasGriffin",
