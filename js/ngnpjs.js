@@ -5,7 +5,7 @@ window.fetch || document.write('<script src="js/fetch.min.js"></script>');
 // Load the service worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/serviceworker.js", { scope: "/" })
+    .register("/sw.js", { scope: "/" })
 
     .then(function(registration) {
       console.log(
