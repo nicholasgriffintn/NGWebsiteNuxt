@@ -4,4 +4,5 @@ pre {
     background: #333;
     color: #fff;
     padding: 1rem;
+    overflow-x: auto;
 }
