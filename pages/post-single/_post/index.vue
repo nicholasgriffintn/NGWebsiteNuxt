@@ -31,12 +31,14 @@ export default {
     return {
       title: this.attributes.title + ' | Nicholas Griffin',
       meta: [
-        {
-          hid: "description",
-          name: "description",
-          content: this.attributes.description
-        }
-      ]
+        { hid: 'title', property: 'title', content: this.attributes.title },
+        { hid: 'description', name: 'description', content: this.attributes.description },
+        { hid: 'og:description', name: 'og:description', content: this.attributes.description },
+        { hid: 'keywords', name: 'keywords', content: this.attributes.tags },
+        { hid: 'ogTitle', property: 'og:title', content: this.attributes.title },
+        { hid: 'ogType', property: 'og:type', content: 'article' },
+        { hid: 'ogImage', property: 'og:image', content: this.attributes.header }
+      ],
     };
   }
 };

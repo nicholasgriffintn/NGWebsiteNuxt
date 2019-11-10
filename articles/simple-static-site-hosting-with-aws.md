@@ -3,18 +3,18 @@ title: Hosting my static site on S3 with AWS CodePipeline
 published: true
 description: How I'm using AWS CodePipeline to automatically build and push my site to AWS' S3
 tags: javascript,AWS,static site,AWS CodePipeline,AWS S3
-thumbnail: https://cdn.nicholasgriffin.dev/images/Hosting+my+static+site+on+S3+with+AWS+CodePipeline/Screenshot+2019-05-31+at+17.59.17.png
+thumbnail: https://cdn.nicholasgriffin.dev/codepipeline-thumbnail.png
 header: https://cdn.nicholasgriffin.dev/images/Hosting+my+static+site+on+S3+with+AWS+CodePipeline/Screenshot+2019-05-31+at+17.59.07.png
 ctime: 2019-05-31
 ---
 
-So alongside my adventures with Nuxt and static sites yesterday, I thought it would be a good time to start using CI/CD for my personal website with the help of AWS CodePipeline. I have been using this a lot at work for a few projects and I have to say, it is a fantastic tool for quiickly and automatically building and deploying a website to a range of Amazon's services, including ECS, EC2, S3 and many more.
+So alongside my adventures with Nuxt and static sites yesterday, I thought it would be a good time to start using CI/CD for my personal website with the help of AWS CodePipeline. I have been using this a lot at work for a few projects and I have to say, it is a fantastic tool for quickly and automatically building and deploying a website to a range of Amazon's services, including ECS, EC2, S3 and many more.
 
-As we are buiilding a static site, we will be deploying straight to an S3 bucket that will have static website hosting enabled. The pipline will be triggered by a commit to a branch within my personal website's repo onn Github, you can also use CodeCommit if you prefer to keep it within AWS, personally, I prefer Github as it works with more services.
+As we are building a static site, we will be deploying straight to an S3 bucket that will have static website hosting enabled. The pipeline will be triggered by a commit to a branch within my personal website's repo onn Github, you can also use CodeCommit if you prefer to keep it within AWS, personally, I prefer Github as it works with more services.
 
 ## Setting up our repo
 
-I'm going to assume that you already have your static website commited to a master branch of a repo somewhere.
+I'm going to assume that you already have your static website committed to a master branch of a repo somewhere.
 
 That's completely fine, however, if you are going to be using a static site generator like Nuxt or Gatsby then you are going to want to split your build files from the build tool, as you don't want the build tool going up to your S3 bucket or your website.
 
@@ -30,15 +30,15 @@ Once that's done you should commit your first build to the deploy branch ready f
 
 ## Creating our S3 bucket
 
-Before we can create our pipline, you'll need to create and setup a new S3 bucket to host your website on.
+Before we can create our pipeline, you'll need to create and setup a new S3 bucket to host your website on.
 
-I'll let Aamazon explain the initial processes of this, as it's quite simple and is likely to change a lot. You just need to make sure that you name your bucket with the same domain name that you'll be using for the HTTP access. So for me, that would be 'nicholasgriffin.dev'.
+I'll let Amazon explain the initial processes of this, as it's quite simple and is likely to change a lot. You just need to make sure that you name your bucket with the same domain name that you'll be using for the HTTP access. So for me, that would be 'nicholasgriffin.dev'.
 
 Once created, you'll want to attach a policy to your bucket to ensure that all files are public.
 
 As the whole idea of this is that deploys will happen automatically, we don't want to be setting permissions manually.
 
-You can do this by clicking on the permissions tab withiin you S3 bucket and then on Bucket Poliy. Then you'll need to add the following to the policy editor.
+You can do this by clicking on the permissions tab within you S3 bucket and then on Bucket policy. There you'll need to add the following to the policy editor.
 
 ```yaml
 {
@@ -61,13 +61,13 @@ You'll need to change the ARN to your S3's path,  however, once you've copied th
 
 Next you'll need to click on the 'Static website hosting' tab and enabled static hosting.
 
-Enter index.html for the index page and 200.html for the error page, or whatever your error page url and index page is. Nuxt has it's own error  handling so the error page doesn't mattter too much.
+Enter index.html for the index page and 200.html for the error page, or whatever your error page url and index page is. Nuxt has it's own error  handling so the error page doesn't matter too much.
 
 ## Setting up CodePipeline
 
 Once you have done both of those steps you'll be ready to set up your pipeline for deployments.
 
-To do this, head over to CodePipline in AWS and select 'New Pipeline', give your pipeline a fitting name and then select 'Next'.
+To do this, head over to CodePipeline in AWS and select 'New Pipeline', give your pipeline a fitting name and then select 'Next'.
 
 ![CodePipeline Add Source](https://cdn.nicholasgriffin.dev/images/Hosting+my+static+site+on+S3+with+AWS+CodePipeline/Screenshot+2019-05-31+at+17.50.58.png)
 
@@ -75,7 +75,7 @@ Next you'll need to add a source provider.
 
 We are using Github, once you select  that you have to connect you account and then select both the repo that you want to use and the branch, like what I've selected in the above image.
 
-You should also use the recommended detection optioon of Github webhooks.
+You should also use the recommended detection option of Github webhooks.
 
 Once that's done you can move onto the next step, which should be the build stage, we're not using this stage so we'll skip this and move onto the next stage.
 

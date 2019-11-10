@@ -3,7 +3,8 @@
     <article v-for="(post,key) in bloglist" :key="key" class="ui card">
       <div class="image">
         <img
-          :src="post.thumbnail"
+          class="lazy"
+          :data-src="post.thumbnail"
           :alt="post.title"
           loading="lazy"
         />

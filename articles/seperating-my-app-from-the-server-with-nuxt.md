@@ -1,16 +1,16 @@
 ---
 title: Making my site's content static with Nuxt
 published: true
-description: Seperating my app from the server with static content and Nuxt
+description: Separating my app from the server with static content and Nuxt
 tags: javascript,Nuxt,Vue,Static Site,Markdown
-thumbnail: https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.51.01.png
+thumbnail: https://cdn.nicholasgriffin.dev/nuxt-thumbnail.png
 header: https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.44.00.png
 ctime: 2019-05-30
 ---
 
 So a few months ago I wrote about how [i created a blog for myself with Node, Express and Mongo](https://nicholasgriffin.dev/post-single/5c7be6e2a1e5fbe51cd94950). I've been using that system for a couple of months now and it worked well in terms of allowing me to play around with Mongo and Express, however, it is not the best solution on offer.
 
-So yesterday, I decided that noow would be a good time to start creating a  new static site setup that would allow my appliication to be hosted seperately from the server. I also wanted my app to be a static site so that i could host it on S3.
+So yesterday, I decided that noow would be a good time to start creating a  new static site setup that would allow my application to be hosted separately from the server. I also wanted my app to be a static site so that i could host it on S3.
 
 There are a range of options out there for creating static sites with Node, however, I wanted to do more with Vue.js and so II decided that Nuxt would be the best option.
 
@@ -18,11 +18,11 @@ There are a range of options out there for creating static sites with Node, howe
 
 Setting up Nuxt is actually incredibly simple via their create-nuxt-app tool.
 
-To start with it you'll need to make sure that you have npx and npm installed. Once you do, you simply need to run the following commannd: `yarn create nuxt-app <project-name>`.
+To start with it you'll need to make sure that you have npx and npm installed. Once you do, you simply need to run the following command: `yarn create nuxt-app <project-name>`.
 
 ![](https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.59.00.png)
 
-This should then do everything for you, aside from answering a few questions about your app, which it will leaave to you.
+This should then do everything for you, aside from answering a few questions about your app, which it will leave to you.
 
 I won't go through the rest as the next part will depend on your own project, however, there are a ton of Nuxt tutorials out there and it's really simple,  I moved this website over night and while it does still have  a couple of issues (and I still need to do  the server part), the process was painless thanks  to Nuxt and Vue.
 
@@ -85,7 +85,7 @@ export  const  mutations  = {
 
 And now we will need to actually set our state for the bloglist.
 
-To do that, we will be using the `nuxtServerInit` function,  which is built into Vuex for updating the store on the fly. We will be using it to read the articles folder and then commit the information from those articles to the store alongside that  articles artributes.
+To do that, we will be using the `nuxtServerInit` function,  which is built into Vuex for updating the store on the fly. We will be using it to read the articles folder and then commit the information from those articles to the store alongside that  articles attributes.
 
 ```javascript
 export const actions = { 
@@ -170,14 +170,14 @@ Now that we have our blog list, we need to create our actual  blog post page.
 
 To do this, we will need to split the content from the markdown file from the attributes.
 
-For this to work, you'l need to set attributes at  the top of the markdown file for each parameter that you want within your attributes, like the following:
+For this to work, you'll need to set attributes at  the top of the markdown file for each parameter that you want within your attributes, like the following:
 
 ```markdown
 
 ---
 title:  Making my site's content static with Nuxt
 published:  true
-description:  Seperating my app from the server with static content and Nuxt
+description:  Separating my app from the server with static content and Nuxt
 tags:  javascript,Nuxt,Vue,Static Site,Markdown
 thumbnail:  https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.51.01.png
 header:  https://cdn.nicholasgriffin.dev/images/Screenshot+2019-05-30+at+22.44.00.png
@@ -188,7 +188,7 @@ ctime:  2019-05-30
 
 We will be able to use  these on both the blog page and the single blog page.
 
-Now we need to create an index file for the page path of our single post, for me that starts by creating a folder within the pages folder called 'single-post',  then within that,  we will create oour route folder, which for this is '_post'.
+Now we need to create an index file for the page path of our single post, for me that starts by creating a folder within the pages folder called 'single-post',  then within that,  we will create our route folder, which for this is '_post'.
 
 Finally, within the _post folder we will create an index.vue file, within that we'll need the following script, which will set up our data and get us started.
 

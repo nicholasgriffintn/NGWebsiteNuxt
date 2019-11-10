@@ -16,21 +16,48 @@
       </div>
     </div>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-
-
-    <script src="js/lazyload.min.js"></script>
-
-    <script src="js/typed.min.js" type="text/javascript"></script>
-    <script src="js/nghpjs.js"></script>
-
+    <div id="scriptsWrap"></div>
   </div>
 </template>
 
 <script>
-import '~/static/css/style.css'
+function insertAndExecute(id, text) {
+    document.getElementById(id).innerHTML = text;
+    var scripts = Array.prototype.slice.call(document.getElementById(id).getElementsByTagName("script"));
+    for (var i = 0; i < scripts.length; i++) {
+        if (scripts[i].src != "") {
+            var tag = document.createElement("script");
+            tag.src = scripts[i].src;
+            document.getElementsByTagName("head")[0].appendChild(tag);
+        }
+        else {
+            eval(scripts[i].innerHTML);
+        }
+    }
+}
+
+function removeJS(filename){
+ var tags = document.getElementsByTagName('script');
+ for (var i = tags.length; i >= 0; i--){ //search backwards within nodelist for matching elements to remove
+  if (tags[i] && tags[i].getAttribute('src') != null && tags[i].getAttribute('src').indexOf(filename) != -1)
+   tags[i].parentNode.removeChild(tags[i]); //remove element by calling parentNode.removeChild()
+ }
+}
 
 export default {
   name: 'homepage',
+  mounted () {
+
+    removeJS('/js/nghpjs.js')
+    removeJS('/js/typed.min.js')
+    removeJS('/js/lazyload.min.js')
+
+    insertAndExecute('scriptsWrap', "<script src='/js/lazyload.min.js'><\/script>")
+
+    insertAndExecute('scriptsWrap', "<script src='/js/typed.min.js'><\/script>")
+
+    insertAndExecute('scriptsWrap', "<script src='/js/nghpjs.js'><\/script>")
+
+  },
 }
 </script>
