@@ -5,3 +5,7 @@ pre {
     color: #fff;
     padding: 1rem;
 }
+
+.cookies__box p {
+    margin-top: 0px;
+}
