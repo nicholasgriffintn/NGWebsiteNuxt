@@ -4,7 +4,7 @@ published: true
 description: How you could automatically build a Gatsby site with AWS CodeBuild.
 tags: javascript,AWS,static site,AWS CodeBuild,AWS S3,AWS CodeBuild,Gatsby,CI
 thumbnail: https://cdn.nicholasgriffin.dev/images/building-a-gatsby-site-with-aws-codebuild/building-a-gatsby-site-with-aws-codebuild-thumb.png
-header: https://cdn.nicholasgriffin.dev/images/building-a-gatsby-site-with-aws-codebuild/building-a-gatsby-site-with-aws-codebuild-main.png
+header: https://cdn.nicholasgriffin.dev/images/building-a-gatsby-site-with-aws-codebuild/building-a-gasby-site-with-aws-codebuild-featured.png
 ctime: 2020-01-25
 ---
 
